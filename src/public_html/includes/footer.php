@@ -1,7 +1,7 @@
 <div class="footer-container">
     <footer>
         <div>
-            <?php echo date("Y"); ?> Daniel Sirz
+            &copy; <?php echo date("Y"); ?> Daniel Sirz
         </div>
         <div>
             <i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/enterprisebug" target="_blank" rel="noopener">enterprisebug</a>
