@@ -1,4 +1,7 @@
-on: push
+on: 
+  push:
+    paths: 
+      - 'src/public_html/**'
 name: 🚀 Deploy website on push
 jobs:
   web-deploy:
