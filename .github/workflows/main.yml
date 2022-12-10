@@ -16,4 +16,4 @@ jobs:
         password: ${{ secrets.SFTP_PASSWORD }}
         protocol: ftps
         server-dir: /public_html/
-        local-dir: /src/
+        local-dir: /sirz.de/src/
