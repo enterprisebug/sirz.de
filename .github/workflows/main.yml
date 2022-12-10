@@ -15,5 +15,5 @@ jobs:
         username: sirzad
         password: ${{ secrets.SFTP_PASSWORD }}
         protocol: ftps
-        server-dir: /public_html/
-        local-dir: /sirz.de/src/
+        server-dir: public_html/
+        local-dir: ./src/
