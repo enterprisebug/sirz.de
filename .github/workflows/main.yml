@@ -70,4 +70,4 @@ jobs:
           password: ${{ secrets.SFTP_PASSWORD }}
           protocol: ftps
           server-dir: public_html/
-          local-dir: public
+          local-dir: public/
