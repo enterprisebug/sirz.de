@@ -1,1 +1,1 @@
-tbd
+[![Deploy Hugo site to sirz.de](https://github.com/enterprisebug/sirz.de/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/enterprisebug/sirz.de/actions/workflows/main.yml)
