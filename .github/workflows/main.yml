@@ -71,9 +71,6 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: hugo-website
-    
-    - name: Display structure of downloaded files
-      run: ls -R
 
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -83,4 +80,3 @@ jobs:
         password: ${{ secrets.SFTP_PASSWORD }}
         protocol: ftps
         server-dir: public_html/
-        local-dir: ./public/
