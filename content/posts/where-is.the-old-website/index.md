@@ -12,8 +12,8 @@ resources:
 - name: "featured-image-preview"
   src: "featured-image-preview.webp"
 
-tags: ["Markdown", "HTML"]
-categories: ["Markdown"]
+tags: ["Public"]
+categories: ["Personal"]
 
 lightgallery: true
 
