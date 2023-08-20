@@ -146,7 +146,7 @@
                     {{- .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML -}}
                 </a>
             {{- end -}}
-            <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}">
+            <a href="javascript:void(0);" class="menu-item theme-switch" title="{{ T "switchTheme" }}" rel="nofollow">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a>
             {{- if .Site.IsMultiLingual -}}
