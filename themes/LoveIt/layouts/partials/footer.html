@@ -1,13 +1,6 @@
 {{- if ne .Site.Params.footer.enable false -}}
     <footer class="footer">
         <div class="footer-container">
-            {{- /* Custom Content */ -}}
-            {{- with .Site.Params.footer.custom -}}
-                <div class="footer-line">
-                    {{- safeHTML . -}}
-                </div>
-            {{- end -}}
-
             {{- /* Hugo and LoveIt */ -}}
             {{- if ne .Site.Params.footer.hugo false -}}
                 <div class="footer-line">
@@ -46,6 +39,13 @@
                     <span class="icp">{{ . | safeHTML }}</span>
                 {{- end -}}
             </div>
+
+            {{- /* Custom Content */ -}}
+            {{- with .Site.Params.footer.custom -}}
+                <div class="footer-line">
+                    {{- safeHTML . -}}
+                </div>
+            {{- end -}}
         </div>
     </footer>
 {{- end -}}

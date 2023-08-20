@@ -46,6 +46,14 @@ languageName = "English"
     name = "CV"
     url = "/posts/cv/"
     title = "Curriculum Vitae"
+  [[menu.main]]
+    weight = 4
+    identifier = "github"
+    pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+    post = ""
+    name = ""
+    url = "https://github.com/enterprisebug/sirz.de"
+    title = "GitHub"
 
 # Markup related configuration in Hugo
 [markup]
@@ -121,6 +129,12 @@ languageName = "English"
         # default behavior when you don't set "hiddenFromHomePage" in front matter
         defaultHiddenFromHomePage = false
   
+  # Footer config
+  [params.footer]
+    enable = true
+    # Custom content (HTML format is supported)
+    custom = "<a href=\"/imprint\" alt=\"Imprint\">Imprint</a>"
+
   [params.social]
     GitHub = "enterprisebug"
     Linkedin = "daniel-sirz"
