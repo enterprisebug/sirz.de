@@ -46,6 +46,14 @@ languageName = "English"
     name = "CV"
     url = "/posts/cv/"
     title = "Curriculum Vitae"
+  [[languages.en.menu.main]]
+    weight = 4
+    identifier = "github"
+    pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+    post = ""
+    name = ""
+    url = "https://github.com/enterprisebug/sirz.de"
+    title = "GitHub"
 
 # Markup related configuration in Hugo
 [markup]
