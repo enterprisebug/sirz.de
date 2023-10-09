@@ -21,7 +21,11 @@ toc:
   enable: false
 ---
 
-## Since November 2016
+## Cloud Architect at Caterpillar Energy Solutions GmbH
+### Since November 2016
+
+Developing a microservice based sales tool running in the Microsoft Azure cloud.
+
 
 ## Senior Consultant at CAIRO AG
 ### Nov 2014 - Oct 2016
