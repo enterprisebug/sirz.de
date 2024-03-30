@@ -1,0 +1,58 @@
+name: Build and Test React Application
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js app
+        run: npm run build
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-website
+          path: ./out
+
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - uses: actions/download-artifact@v3
+      with:
+        name: my-website
+
+    - name: 📂 Sync files to Staging http://staging.sirz.de
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: www226.your-server.de
+        username: sirzad
+        password: ${{ secrets.SFTP_PASSWORD }}
+        protocol: ftps
+        server-dir: public_html/staging/
+      if: github.event_name == 'pull_request'
+
+    - name: 📂 Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: www226.your-server.de
+        username: sirzad
+        password: ${{ secrets.SFTP_PASSWORD }}
+        protocol: ftps
+        server-dir: public_html/staging/
+      if: github.event_name != 'pull_request'
+
