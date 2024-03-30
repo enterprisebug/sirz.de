@@ -1,14 +1,11 @@
 name: Build and Test React Application
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -39,6 +36,16 @@ jobs:
       with:
         name: my-website
 
+    - name: 📂 Sync files to Staging http://staging.sirz.de
+      uses: SamKirkland/FTP-Deploy-Action@4.3.3
+      with:
+        server: www226.your-server.de
+        username: sirzad
+        password: ${{ secrets.SFTP_PASSWORD }}
+        protocol: ftps
+        server-dir: public_html/staging/
+      if: github.event_name == 'pull_request'
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
@@ -47,4 +54,5 @@ jobs:
         password: ${{ secrets.SFTP_PASSWORD }}
         protocol: ftps
         server-dir: public_html/staging/
+      if: github.event_name != 'pull_request'
 
