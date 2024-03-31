@@ -29,7 +29,7 @@ export async function GET(req: Request) {
   })
 
   let articleIds = require
-    .context('..'/blog, true, /\/page\.mdx$/)
+    .context('../blog', true, /\/page\.mdx$/)
     .keys()
     .filter((key) => key.startsWith('./'))
     .map((key) => key.slice(2).replace(/\/page\.mdx$/, ''))
