@@ -1,0 +1,53 @@
+import { ArticleLayout } from '@/components/ArticleLayout'
+
+export const article = {
+  author: 'Daniel Sirz',
+  date: '2024-03-31',
+  title: 'My Journey: Launching My New Homepage with Tailwind UI on Vercel',
+  description:
+    'As a developer, I’ve always been fascinated by the intersection of design and functionality. Recently, I embarked on a mission to revamp my personal website. Armed with enthusiasm and a touch of trepidation, I decided to use Tailwind CSS for styling and Vercel for hosting. Little did I know that this adventure would be both rewarding and challenging.',
+}
+
+export const metadata = {
+  title: article.title,
+  description: article.description,
+}
+
+export default (props) => <ArticleLayout article={article} {...props} />
+
+## Introduction
+
+As a developer, I’ve always been fascinated by the intersection of design and functionality. Recently, I embarked on a mission to revamp my personal website. Armed with enthusiasm and a touch of trepidation, I decided to use Tailwind CSS for styling and Vercel for hosting. Little did I know that this adventure would be both rewarding and challenging.
+
+## Choosing the Tools
+
+### 1. Tailwind CSS
+
+Tailwind CSS is a utility-first CSS framework that allows you to build responsive and visually appealing interfaces with ease. Its atomic approach—where you compose styles by combining utility classes—was both liberating and intimidating. I dove into the documentation, learned about utility classes, and started experimenting.
+
+### 2. Vercel
+
+Vercel, a platform for deploying web applications, promised seamless deployment and performance optimization. Its integration with Next.js (a React framework) made it an ideal choice for my project. I set up my Vercel account, linked my GitHub repository, and prepared for liftoff.
+
+
+## The Learning Curve
+
+### 1. Tailwind CSS: From Skepticism to Admiration
+- **Utility Classes Everywhere:** Initially, I was skeptical. How could a framework based on utility classes provide the flexibility I needed? But as I built components, I realized the power of concise, reusable classes. The ability to tweak designs without writing custom CSS was a game-changer.
+- **Responsive Design Made Easy:** Tailwind’s responsive modifiers allowed me to create layouts that adapted gracefully to different screen sizes. I no longer feared the infamous media queries dance.
+- **Customization and Configuration:** Tailwind’s config file became my playground. I tweaked colors, fonts, and spacing until my site felt uniquely mine.
+
+### 2. Vercel: The Deployment Odyssey
+- **One-Click Deployments:** Vercel’s simplicity impressed me. Linking my GitHub repo triggered automatic deployments whenever I pushed changes. No more manual FTP uploads or complex CI/CD pipelines.
+- **Performance Optimization:** Vercel’s built-in optimizations—like automatic image compression and edge caching—boosted my site’s speed. I reveled in those green Lighthouse scores.
+- **Custom Domains and SSL:** Setting up my custom domain was straightforward. Vercel even handled SSL certificates like a pro.
+
+## The Launch
+
+After weeks of tinkering, debugging, and late-night commits, I hit the "Deploy" button. My new homepage was live! The feeling was akin to launching a rocket—equal parts exhilaration and relief.
+
+## Conclusion
+
+Launching my new homepage with Tailwind UI on Vercel was a rollercoaster ride. The learning curve was steep, but the knowledge gained was invaluable. If you’re considering a similar journey, embrace the challenges, seek help from the community, and celebrate every small victory.
+
+And remember, every hard-won lesson is a step toward mastery. 🚀

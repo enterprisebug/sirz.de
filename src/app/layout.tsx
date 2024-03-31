@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'I’m Daniel Sirz. Cloud software architect at Caterpillar Energy Solutions GmbH in Mannheim.',
   alternates: {
     types: {
-      // 'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
+      'application/rss+xml': `${process.env.NEXT_PUBLIC_SITE_URL}/feed.xml`,
     },
   },
 }
