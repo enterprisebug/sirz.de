@@ -34,3 +34,41 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+# DNS change @Hetzner for Vercel app:
+for Vercel hosting i needed to change:
+
+## A-Record
+**Original:**
+Type: A 
+Name: @
+Value: 188.40.28.6
+
+**New:**
+Type: A
+Name: @
+Value: 76.76.21.21
+
+## CNAME-Record
+**Original:**
+Type: CNAME
+Name: www
+Value: 188.40.28.6
+
+**New:**
+Type: CNAME
+Name: www
+Value: 76.76.21.123 (original was: "cname.vercel-dns.com." but Hetzner console wanted to have a IP address)
+
+## AAAA-Record
+Removed the following records completely
+**Original:**
+Type: AAAA 
+Name: @
+Value: 2a01:4f8:d0a:11fc::2
+
+**Original:**
+Type: AAAA 
+Name: www
+Value: 2a01:4f8:d0a:11fc::2

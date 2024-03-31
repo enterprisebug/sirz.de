@@ -1,44 +1,44 @@
-name: Build and Test React Application
+# name: Build and Test React Application
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+#       - name: Install dependencies
+#         run: npm install
 
-      - name: Build Next.js app
-        run: npm run build
+#       - name: Build Next.js app
+#         run: npm run build
 
-      - name: 📂 Deploy files to Staging http://staging.sirz.de
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: www226.your-server.de
-          username: sirzad
-          password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: ftps
-          server-dir: public_html/staging/
-          local-dir: ./out/
-        if: github.event_name == 'pull_request'
+#       - name: 📂 Deploy files to Staging http://staging.sirz.de
+#         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+#         with:
+#           server: www226.your-server.de
+#           username: sirzad
+#           password: ${{ secrets.SFTP_PASSWORD }}
+#           protocol: ftps
+#           server-dir: public_html/staging/
+#           local-dir: ./out/
+#         if: github.event_name == 'pull_request'
 
-      - name: 📂 Deploy files to Production https://sirz.de
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: www226.your-server.de
-          username: sirzad
-          password: ${{ secrets.SFTP_PASSWORD }}
-          protocol: ftps
-          server-dir: public_html/production/
-          local-dir: ./out/
-        if: github.event_name != 'pull_request'
+#       - name: 📂 Deploy files to Production https://sirz.de
+#         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+#         with:
+#           server: www226.your-server.de
+#           username: sirzad
+#           password: ${{ secrets.SFTP_PASSWORD }}
+#           protocol: ftps
+#           server-dir: public_html/production/
+#           local-dir: ./out/
+#         if: github.event_name != 'pull_request'
 
