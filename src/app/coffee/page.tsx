@@ -58,7 +58,7 @@ export default function Coffee() {
         </h1>
         <ToolsSection title="French Press">
           <Tool title="For a large amount of coffee the Frech press is the tool to go for!">
-            I adore my French press. It's incredibly simple to use, allowing me to brew 0.75 liters of coffee in no time. Perfect for mornings when I crave a generous amount of coffee. The rich aroma that fills the kitchen as I press down the plunger is an added delight. There's something uniquely satisfying about the manual process, which makes each cup feel like a small, rewarding ritual. It's a true companion for my morning routine, ensuring that I start my day with the perfect brew.
+            I adore my French press. It&apos;s incredibly simple to use, allowing me to brew 0.75 liters of coffee in no time. Perfect for mornings when I crave a generous amount of coffee. The rich aroma that fills the kitchen as I press down the plunger is an added delight. There&apos;s something uniquely satisfying about the manual process, which makes each cup feel like a small, rewarding ritual. It&apos;s a true companion for my morning routine, ensuring that I start my day with the perfect brew.
           </Tool>
         </ToolsSection>
         <div className="mt-16 sm:mt-20">
@@ -76,11 +76,11 @@ export default function Coffee() {
 
         <ToolsSection title="Handfilter Coffee">
           <Tool title="HARIO V60 Dripper">
-            As a coffee aficionado, I find immense joy in using the HARIO V60 Dripper. This meticulously designed pour-over coffee maker enhances the entire brewing process, offering a perfect blend of precision and artistry. The V60's conical shape and spiraled ridges allow for optimal extraction, producing a cup of coffee that is rich in flavor and aromatic complexity. Its simplicity in design belies the depth of control it offers, making each brew a unique and satisfying experience. Whether it's the morning ritual or a quiet afternoon indulgence, the HARIO V60 Dripper has become an indispensable part of my daily routine, consistently delivering a superior coffee experience.
+            As a coffee aficionado, I find immense joy in using the HARIO V60 Dripper. This meticulously designed pour-over coffee maker enhances the entire brewing process, offering a perfect blend of precision and artistry. The V60&apos;s conical shape and spiraled ridges allow for optimal extraction, producing a cup of coffee that is rich in flavor and aromatic complexity. Its simplicity in design belies the depth of control it offers, making each brew a unique and satisfying experience. Whether it&apos;s the morning ritual or a quiet afternoon indulgence, the HARIO V60 Dripper has become an indispensable part of my daily routine, consistently delivering a superior coffee experience.
           </Tool>
           <Tool title="HARIO Ceramic Coffee Grinder Mini-Slim +">
             Write a short abstract about the HARIO Ceramic Coffee Grinder Mini-Slim +
-            The HARIO Ceramic Coffee Grinder Mini-Slim + is a compact, lightweight, and portable hand grinder designed for coffee enthusiasts on the go. Its ceramic burrs ensure minimal friction heat, preserving the beans' flavor and aroma1. With a capacity to hold enough beans for up to two cups of coffee, it's perfect for small gatherings or individual use. The grinder's ergonomic design and easy-to-grip shape make it convenient to use, while its durable construction ensures longevity1. Ideal for travel, the Mini-Slim + is a reliable companion for coffee lovers seeking freshly ground beans wherever they go.
+            The HARIO Ceramic Coffee Grinder Mini-Slim + is a compact, lightweight, and portable hand grinder designed for coffee enthusiasts on the go. Its ceramic burrs ensure minimal friction heat, preserving the beans&apos; flavor and aroma1. With a capacity to hold enough beans for up to two cups of coffee, it&apos;s perfect for small gatherings or individual use. The grinder&apos;s ergonomic design and easy-to-grip shape make it convenient to use, while its durable construction ensures longevity1. Ideal for travel, the Mini-Slim + is a reliable companion for coffee lovers seeking freshly ground beans wherever they go.
           </Tool>
           <Tool title="HARIO V60 Drip Scale">
             Write a short abstract why you need the Hario V60 Drip scale
