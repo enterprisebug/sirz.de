@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: {
     template: '%s - Daniel Sirz',
     default:
-      'Daniel Sirz - father, Cloud Software architect, Tennis player, Beach-Volleyball player',
+      'Daniel Sirz - father, Cloud Software architect, Barista, Tennis player, Beach-Volleyball player',
   },
   description:
     'I’m Daniel Sirz. Cloud software architect at Caterpillar Energy Solutions GmbH in Mannheim.',
