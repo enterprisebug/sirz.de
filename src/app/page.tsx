@@ -23,7 +23,6 @@ import image5 from '@/images/photos/image-5.jpg'
 import { ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
-
 function BriefcaseIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
@@ -63,9 +62,7 @@ function ArrowDownIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 function Article({ article }: { article: ArticleWithSlug }) {
   return (
     <Card as="article">
-      <Card.Title href={`/blog/${article.slug}`}>
-        {article.title}
-      </Card.Title>
+      <Card.Title href={`/blog/${article.slug}`}>{article.title}</Card.Title>
       <Card.Eyebrow as="time" dateTime={article.date} decorate>
         {formatDate(article.date)}
       </Card.Eyebrow>
@@ -179,7 +176,11 @@ function Resume() {
           <Role key={roleIndex} role={role} />
         ))}
       </ol>
-      <Button href="/downloads/CV_DanielSirz.pdf" variant="secondary" className="group mt-6 w-full">
+      <Button
+        href="/downloads/CV_DanielSirz.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
         Download CV
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
@@ -222,17 +223,20 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Daniel Sirz - father, cloud software architect, Tennis and Beach-Volleyball player.
+            Daniel Sirz - father, cloud software architect, Barista, Tennis and
+            Beach-Volleyball player.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I am Daniel, a cloud software architect based in Mannheim, Germany.
-            I enjoy seeing my kids growing up! Keen on playing Tennis and Beach-Volleyball.
+            I enjoy seeing my kids growing up and a large cup of coffee 🍵 in the
+            morning! Keen on playing Tennis and Beach-Volleyball.
           </p>
           <div className="mt-6 flex gap-6">
-            <SocialLink 
-              href="https://twitter.com/danielsirz" 
-              aria-label="Follow on X" 
-              icon={XIcon} />
+            <SocialLink
+              href="https://twitter.com/danielsirz"
+              aria-label="Follow on X"
+              icon={XIcon}
+            />
             <SocialLink
               href="https://www.instagram.com/daniel.sirz/"
               aria-label="Follow on Instagram"
