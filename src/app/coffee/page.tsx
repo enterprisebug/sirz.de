@@ -8,6 +8,7 @@ import harioDripper from '@/images/coffee/20210303-TAR_3860web.webp'
 import harioGrinder from '@/images/coffee/MSS-1DTB_web03.webp'
 import harioScale from '@/images/coffee/VST-2000Bweb.webp'
 import frenchPress from '@/images/coffee/51xWBjhpy5L.__AC_SX300_SY300_QL70_ML2_.jpg'
+import waterCooker from '@/images/coffee/61nrnRMIMmL._AC_SX679_.webp'
 import { Container } from '@/components/Container'
 
 function ToolsSection({
@@ -157,7 +158,6 @@ export default function Coffee() {
               delivering a superior coffee experience.
             </Tool>
             <Tool title="HARIO Ceramic Coffee Grinder Mini-Slim +">
-              Write a short abstract about the HARIO Ceramic Coffee Grinder
               Mini-Slim + The HARIO Ceramic Coffee Grinder Mini-Slim + is a
               compact, lightweight, and portable hand grinder designed for
               coffee enthusiasts on the go. Its ceramic burrs ensure minimal
@@ -171,21 +171,31 @@ export default function Coffee() {
               they go.
             </Tool>
             <Tool title="HARIO V60 Drip Scale">
-              Write a short abstract why you need the Hario V60 Drip scale When
-              brewing the perfect cup of coffee, precision is key. The Hario V60
-              Drip Scale ensures you measure your coffee grounds and water with
-              impeccable accuracy, providing consistency in every cup. This
-              scale is not just about measurement; it’s about enhancing the
-              brewing experience. It features a built-in timer that helps you
-              control the extraction process, ensuring you get the most flavor
-              from your beans. For coffee enthusiasts who understand that each
-              gram counts, the Hario V60 Drip Scale is an indispensable tool
-              that elevates your home brewing to barista-level precision.
+              When brewing the perfect cup of coffee, precision is key. The
+              Hario V60 Drip Scale ensures you measure your coffee grounds and
+              water with impeccable accuracy, providing consistency in every
+              cup. This scale is not just about measurement; it’s about
+              enhancing the brewing experience. It features a built-in timer
+              that helps you control the extraction process, ensuring you get
+              the most flavor from your beans. For coffee enthusiasts who
+              understand that each gram counts, the Hario V60 Drip Scale is an
+              indispensable tool that elevates your home brewing to
+              barista-level precision.
+            </Tool>
+            <Tool title="TIMEMORE Electric gooseneck kettle">
+              An electric gooseneck kettle is essential for precision brewing,
+              whether for coffee or tea. It offers precise temperature control,
+              ensuring optimal extraction of flavors. The gooseneck spout allows
+              for a steady, controlled pour, crucial for pour-over coffee
+              techniques. Additionally, electric kettles are fast, convenient,
+              and come with safety features like automatic shut-off. Their
+              modern design adds a stylish touch to any kitchen, making them a
+              valuable tool for any beverage enthusiast.
             </Tool>
           </ToolsSection>
         </div>
         <div className="mt-16 sm:mt-20">
-          <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+          <div className="-my-4 flex justify-center gap-5 overflow-visible py-4 sm:gap-8">
             <div
               className={clsx(
                 'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
@@ -221,6 +231,19 @@ export default function Coffee() {
               <Image
                 src={harioScale}
                 alt="HARIO V60 Drip Scale"
+                sizes="(min-width: 640px) 18rem, 11rem"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            </div>
+            <div
+              className={clsx(
+                'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+                'rotate-2',
+              )}
+            >
+              <Image
+                src={waterCooker}
+                alt="TIMEMORE Electric gooseneck kettle"
                 sizes="(min-width: 640px) 18rem, 11rem"
                 className="absolute inset-0 h-full w-full object-cover"
               />
