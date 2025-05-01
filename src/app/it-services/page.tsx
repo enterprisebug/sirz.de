@@ -146,11 +146,11 @@ export default function About() {
           </p>
           <ul role="list">
             <SocialLink
-              href="mailto:daniel.sirz@gmail.com"
+              href="mailto:daniel@sirz.de"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              daniel.sirz@gmail.com
+              daniel@sirz.de
             </SocialLink>
           </ul>
         </div>
