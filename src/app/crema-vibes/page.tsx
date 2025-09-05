@@ -1,19 +1,17 @@
-import { Card } from '@/components/Card'
-import { Section } from '@/components/Section'
-import { SimpleLayout } from '@/components/SimpleLayout'
 import Image from 'next/image'
 import clsx from 'clsx'
 import Link from 'next/link'
 
-import portraitImage from '@/images/coffee/daniel_on_coffee.jpeg'
-import table from '@/images/coffee/table.jpeg'
-import homeSetup from '@/images/coffee/home-setup.jpeg'
-import rosetta from '@/images/coffee/rosetta.jpeg'
-import grinder from '@/images/coffee/grinder.jpeg'
-import rosetta2 from '@/images/coffee/rosetta2.jpeg'
-import rosetta3 from '@/images/coffee/rosetta3.jpeg'
-import tulip from '@/images/coffee/tulip.jpeg'
-import heart from '@/images/coffee/heart.jpeg'
+import portraitImage from '@/images/crema-vibes/daniel_on_coffee.jpeg'
+import table from '@/images/crema-vibes/table.jpeg'
+import homeSetup from '@/images/crema-vibes/home-setup.jpeg'
+import rosetta from '@/images/crema-vibes/rosetta.jpeg'
+import grinder from '@/images/crema-vibes/grinder.jpeg'
+import rosetta2 from '@/images/crema-vibes/rosetta2.jpeg'
+import rosetta3 from '@/images/crema-vibes/rosetta3.jpeg'
+import tulip from '@/images/crema-vibes/tulip.jpeg'
+import heart from '@/images/crema-vibes/heart.jpeg'
+import cremaVibesLogo from '@/images/crema-vibes/CremaVibes.svg'
 import { Container } from '@/components/Container'
 import { InstagramIcon } from '@/components/SocialIcons'
 
@@ -40,8 +38,9 @@ function SocialLink({
 }
 
 export const metadata = {
-  title: 'Coffee 🍵',
-  description: 'Hobby Barista & Latte Art Enthusiast since 2025 (Crema Vibes)',
+  title: 'Crema Vibes 🍵',
+  description:
+    'Daniel Sirz -Crema Vibes - Hobby Barista & Latte Art Enthusiast since 2025',
 }
 
 export default function Coffee() {
@@ -76,6 +75,20 @@ export default function Coffee() {
               precision, and the pursuit of the perfect brew. My name is Daniel,
               and I&apos;m a dedicated home barista with a profound love for all
               things coffee.
+            </p>
+            <p className="m-10 text-base text-zinc-600 dark:text-zinc-400">
+              <a
+                href="https://www.instagram.com/crema.vibes/"
+                target="_blank"
+                title="Crema Vibes on instagram"
+              >
+                <Image
+                  src={cremaVibesLogo}
+                  alt="Crema Vibes on instagram"
+                  sizes="(min-width: 1024px) 32rem, 20rem"
+                  className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+                />
+              </a>
             </p>
             <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
               My journey into the world of high-end espresso began in early May
