@@ -30,7 +30,7 @@ export function Footer() {
                 <NavLink href="/">Home</NavLink>
                 <NavLink href="/about">About</NavLink>
                 <NavLink href="/it-services">IT Services 👨‍💻</NavLink>
-                <NavLink href="/crema-vibes">Crema Vibes 🍵</NavLink>
+                <NavLink href="/crema.vibes">Crema Vibes 🍵</NavLink>
                 <NavLink href="/archive">Archive</NavLink>
                 <NavLink href="/blog">Blog</NavLink>
                 <NavLink href="/imprint">Imprint</NavLink>

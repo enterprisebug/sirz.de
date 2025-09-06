@@ -10,9 +10,9 @@ const nextConfig = {
       // Basic redirect
       {
         source: '/coffee',
-        destination: '/crema-vibes',
+        destination: '/crema.vibes',
         permanent: true,
-      }
+      },
     ]
   },
 }
