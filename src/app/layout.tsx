@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
@@ -34,6 +34,7 @@ export default function RootLayout({
           </div>
         </Providers>
       </body>
+      <GoogleAnalytics gaId="G-M3BG3L3WRX" />
     </html>
   )
 }
