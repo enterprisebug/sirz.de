@@ -239,7 +239,12 @@ export default async function Home() {
             />
             <SocialLink
               href="https://www.instagram.com/daniel.sirz/"
-              aria-label="Follow on Instagram"
+              aria-label="daniel.sirz on Instagram"
+              icon={InstagramIcon}
+            />
+            <SocialLink
+              href="https://www.instagram.com/crema.vibes/"
+              aria-label="crema.vibes on Instagram"
               icon={InstagramIcon}
             />
             <SocialLink

@@ -69,25 +69,26 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Daniel Sirz. Cloud software architect at Caterpillar Energy Solutions GmbH in Mannheim.
+            I’m Daniel Sirz. Cloud software architect at Caterpillar Energy
+            Solutions GmbH in Mannheim.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              Actually this picture shows a younger me, taken in August 2011. 
-              It was a super hot summer day when i went to the photographer. 
-              As I posed as a businessman, I remained uncertain about the trajectory 
+              Actually this picture shows a younger me, taken in August 2011. It
+              was a super hot summer day when i went to the photographer. As I
+              posed as a businessman, I remained uncertain about the trajectory
               of my career as a consultant.
             </p>
             <p>
-              Looking back, i learned a lot. Did many projects for several customers
-              as a consultant. After eight years of consulting i decided to be part
-              of a large enterprise, because i didn´t want to switch projects and 
-              customers anymore.
+              Looking back, i learned a lot. Did many projects for several
+              customers as a consultant. After eight years of consulting i
+              decided to be part of a large enterprise, because i didn´t want to
+              switch projects and customers anymore.
             </p>
             <p>
-              I really enjoy my current role at work, a good mix of organizational tasks 
-              and development. A team i can rely on and discussions that keep me going
-              make the job a fun part of the day.
+              I really enjoy my current role at work, a good mix of
+              organizational tasks and development. A team i can rely on and
+              discussions that keep me going make the job a fun part of the day.
             </p>
           </div>
         </div>
@@ -96,13 +97,32 @@ export default function About() {
             <SocialLink href="https://twitter.com/danielsirz" icon={XIcon}>
               Follow on X
             </SocialLink>
-            <SocialLink href="https://www.instagram.com/daniel.sirz/" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
+            <SocialLink
+              href="https://www.instagram.com/daniel.sirz/"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
+              daniel.sirz on Instagram
             </SocialLink>
-            <SocialLink href="https://github.com/enterprisebug/" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://www.instagram.com/daniel.sirz/"
+              icon={InstagramIcon}
+              className="mt-4"
+            >
+              crema.vibes on Instagram
+            </SocialLink>
+            <SocialLink
+              href="https://github.com/enterprisebug/"
+              icon={GitHubIcon}
+              className="mt-4"
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="https://www.linkedin.com/in/daniel-sirz/" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/daniel-sirz/"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink

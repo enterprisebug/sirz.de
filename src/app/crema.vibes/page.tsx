@@ -48,7 +48,7 @@ export default function Coffee() {
     <Container className="mt-16 sm:mt-32">
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:max-w-none">
+          <div className="max-w-xs px-2.5 lg:mt-40 lg:max-w-none">
             <Image
               src={portraitImage}
               alt="Daniel Sirz Barista Profile Picture"
@@ -80,7 +80,7 @@ export default function Coffee() {
               <a
                 href="https://www.instagram.com/crema.vibes/"
                 target="_blank"
-                title="Crema Vibes on instagram"
+                title="crema.vibes on Instagram"
               >
                 <Image
                   src={cremaVibesLogo}
@@ -96,13 +96,6 @@ export default function Coffee() {
               welcomed two magnificent pieces of machinery into my home: the
               legendary La Marzocco Linea Micra espresso machine and its perfect
               companion, the La Marzocco Pico grinder.
-            </p>
-            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              Since then, my kitchen has transformed into a vibrant training
-              ground, primarily for mastering the intricate dance of latte art.
-              There&apos;s something incredibly satisfying about transforming
-              milk into delicate hearts, rosettas, and tulips, and I&apos;m
-              constantly pushing myself to refine my technique.
             </p>
           </header>
         </div>
@@ -165,6 +158,13 @@ export default function Coffee() {
         </div>
       </div>
       <div className="mt-16 max-w-3xl sm:mt-20">
+        <p className="text-base text-zinc-600 dark:text-zinc-400">
+          Since then, my kitchen has transformed into a vibrant training ground,
+          primarily for mastering the intricate dance of latte art. There&apos;s
+          something incredibly satisfying about transforming milk into delicate
+          hearts, rosettas, and tulips, and I&apos;m constantly pushing myself
+          to refine my technique.
+        </p>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
           My dedication extends beyond just the brewing process. To truly create
           my ideal coffee sanctuary, I even designed and built the custom coffee
