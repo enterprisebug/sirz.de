@@ -53,7 +53,7 @@ export default function Coffee() {
     <Container className="mt-16 sm:mt-32">
       <header className="max-w-3xl">
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-          Arvhived: A Tribute to Coffee: From Home Barista to Professional
+          Archived: A Tribute to Coffee: From Home Barista to Professional
           Artisan
         </h1>
         <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">

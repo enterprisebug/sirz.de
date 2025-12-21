@@ -131,6 +131,29 @@ function Role({ role }: { role: Role }) {
 }
 
 function Resume() {
+  let certs: Array<Certification> = [
+    {
+      company:
+        'International Software Architecture Qualification Board (ISAQB)',
+      title: 'CPSA-FL (2025)',
+      link: 'iSAQB_2502-CPSAFL-0171-EN.PDF',
+      end: '05/2025',
+    },
+    {
+      company: 'International Requirements Engineering Board (IREB)',
+      title: 'CPRE-FL (2013)',
+      link: 'CertifiedProfessionalForRequirementsEngineering.pdf',
+      end: '04/2013',
+    },
+    {
+      company:
+        'Speditions- und Logistikverband (SLV) Hessen/Rheinland-Pfalz e.V.',
+      title: 'Logistics Manager (2007)',
+      link: 'LogisticsManager.pdf',
+      end: '07/2007',
+    },
+  ]
+
   let resume: Array<Role> = [
     {
       company: 'Caterpillar Energy Solutions GmbH',
@@ -166,25 +189,45 @@ function Resume() {
   ]
 
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Work</span>
-      </h2>
-      <ol className="mt-6 space-y-4">
-        {resume.map((role, roleIndex) => (
-          <Role key={roleIndex} role={role} />
+    <>
+      <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+          <BriefcaseIcon className="h-6 w-6 flex-none" />
+          <span className="ml-3">Work</span>
+        </h2>
+        <ol className="mt-6 space-y-4">
+          {resume.map((role, roleIndex) => (
+            <Role key={roleIndex} role={role} />
+          ))}
+        </ol>
+        <Button
+          href="/downloads/CV_DanielSirz.pdf"
+          variant="secondary"
+          className="group mt-6 w-full"
+        >
+          Download CV
+          <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+        </Button>
+      </div>
+      <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
+        <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
+          <BriefcaseIcon className="h-6 w-6 flex-none" />
+          <span className="ml-3">Certifications</span>
+        </h2>
+
+        {certs.map((cert, certIndex) => (
+          <Button
+            href={`/downloads/${cert.link}`}
+            variant="secondary"
+            className="group mt-6 w-full"
+            key={certIndex}
+          >
+            {cert.title}
+            <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
+          </Button>
         ))}
-      </ol>
-      <Button
-        href="/downloads/CV_DanielSirz.pdf"
-        variant="secondary"
-        className="group mt-6 w-full"
-      >
-        Download CV
-        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
-      </Button>
-    </div>
+      </div>
+    </>
   )
 }
 
@@ -275,4 +318,11 @@ export default async function Home() {
       </Container>
     </>
   )
+}
+
+interface Certification {
+  company: string
+  title: string
+  link: string
+  end: string
 }
