@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import { AppContext } from '@/app/providers'
 import { Container } from '@/components/Container'
 import { Prose } from '@/components/Prose'
+import { getBlogPostingJsonLd } from '@/lib/seo'
 import { type ArticleWithSlug } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
@@ -31,9 +32,14 @@ export function ArticleLayout({
 }) {
   let router = useRouter()
   let { previousPathname } = useContext(AppContext)
+  let blogPostingJsonLd = getBlogPostingJsonLd(article)
 
   return (
     <Container className="mt-16 lg:mt-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingJsonLd) }}
+      />
       <div className="xl:relative">
         <div className="mx-auto max-w-2xl">
           {previousPathname && (

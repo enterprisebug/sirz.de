@@ -38,6 +38,22 @@ export const metadata: Metadata = {
   title: 'Blog posts',
   description:
     'To be honest, i tried many blogs after i redesigned my website. Same with this one... Let´s see if there will be more that one article.',
+  alternates: {
+    canonical: '/blog',
+  },
+  openGraph: {
+    type: 'website',
+    url: '/blog',
+    title: 'Blog posts',
+    description:
+      'To be honest, i tried many blogs after i redesigned my website. Same with this one... Let´s see if there will be more that one article.',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Blog posts',
+    description:
+      'To be honest, i tried many blogs after i redesigned my website. Same with this one... Let´s see if there will be more that one article.',
+  },
 }
 
 export default async function ArticlesIndex() {

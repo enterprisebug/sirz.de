@@ -11,6 +11,21 @@ export const article = {
 export const metadata = {
   title: article.title,
   description: article.description,
+  alternates: {
+    canonical: '/blog/navigating-the-cyber-range-a-tale-of-challenges-and-triumphs',
+  },
+  openGraph: {
+    type: 'article',
+    url: '/blog/navigating-the-cyber-range-a-tale-of-challenges-and-triumphs',
+    title: article.title,
+    description: article.description,
+    publishedTime: article.date,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: article.title,
+    description: article.description,
+  },
 }
 
 export default (props) => <ArticleLayout article={article} {...props} />
