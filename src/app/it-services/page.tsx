@@ -53,6 +53,9 @@ export const metadata: Metadata = {
   title: 'IT services',
   description:
     'With over two decades of expertise in the IT industry, I am thrilled to present my newly established business dedicated to offering top-notch IT services with a special focus on C# programming. My extensive experience, particularly in the enterprise environment, enables me to deliver exceptional solutions tailored to meet your unique needs.',
+  alternates: {
+    canonical: '/it-services',
+  },
 }
 
 export default function About() {
