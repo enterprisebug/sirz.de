@@ -12,6 +12,8 @@ const routes = [
   { path: '/blog', type: 'html' },
   { path: '/blog/beach-volleyball-season-2025-has-begun', type: 'html' },
   { path: '/feed.xml', type: 'xml' },
+  { path: '/robots.txt', type: 'txt' },
+  { path: '/sitemap.xml', type: 'xml' },
   { path: '/imprint', type: 'html' },
   { path: '/it-services', type: 'html' },
 ]
@@ -42,6 +44,10 @@ async function waitForServer(url, timeoutMs) {
 function validateContentType(expectedType, contentType) {
   if (expectedType === 'xml') {
     return contentType.includes('xml')
+  }
+
+  if (expectedType === 'txt') {
+    return contentType.includes('text/plain')
   }
 
   return contentType.includes('text/html')

@@ -10,6 +10,41 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## SEO setup
+
+### Google Search Console verification
+
+This project reads a Google verification token from:
+
+- `GOOGLE_SITE_VERIFICATION`
+
+Set it in your deployment environment (for example in Vercel project settings), then redeploy.
+
+### Top 3 page SEO checklist
+
+Use this checklist regularly for your highest-priority pages:
+
+1. Home (`/`)
+  - Keep one clear H1 and a concise intro paragraph in the first viewport.
+  - Ensure primary internal links point to `/it-services` and your best blog post.
+  - Keep title and meta description aligned with your core expertise.
+
+2. IT Services (`/it-services`)
+  - Make service offering explicit in headings and first 100 words.
+  - Add trust signals: concrete outcomes, years of experience, and proof points.
+  - Add strong internal links to relevant blog posts and contact path.
+
+3. Best-performing Blog Post (`/blog/<slug>`)
+  - Keep the first section directly answering the post’s core search intent.
+  - Add 2-4 internal links to related posts/services with descriptive anchor text.
+  - Refresh content date and examples when information changes.
+
+### After publishing changes
+
+- Re-submit `/sitemap.xml` in Google Search Console.
+- Use URL Inspection for changed pages and request indexing.
+- Re-check Core Web Vitals and indexing status after a few days.
+
 
 ## Hosting model:
 

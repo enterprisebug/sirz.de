@@ -1,13 +1,10 @@
+import { getSiteUrl } from '@/lib/site'
 import assert from 'assert'
 import * as cheerio from 'cheerio'
 import { Feed } from 'feed'
 
 export async function GET(req: Request) {
-  let siteUrl = process.env.NEXT_PUBLIC_SITE_URL
-
-  if (!siteUrl) {
-    throw Error('Missing NEXT_PUBLIC_SITE_URL environment variable')
-  }
+  let siteUrl = getSiteUrl();
 
   let author = {
     name: 'Spencer Sharp',

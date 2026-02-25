@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "smoke:test": "node scripts/smoke-test.mjs"
+    "smoke:test": "node scripts/smoke-test.mjs",
+    "seo:check": "node scripts/seo-check.mjs"
   },
   "browserslist": "defaults, not ie <= 11",
   "dependencies": {
