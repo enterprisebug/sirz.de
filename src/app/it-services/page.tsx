@@ -54,6 +54,7 @@ export const metadata: Metadata = {
   description:
     'IT-Services in Mannheim, Seckenheim, Neckarau, Friedrichsfeld und Feudenheim: Microsoft Azure Beratung, C#/.NET Softwareentwicklung sowie Excel-Beratung und Excel-Transformation für lokale Unternehmen.',
   keywords: [
+    'IT-Services',
     'IT-Services Mannheim',
     'IT-Services Seckenheim',
     'IT-Services Neckarau',
@@ -181,7 +182,9 @@ export default function ItServicesPage() {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessJsonLd),
+        }}
       />
 
       <section>
@@ -193,7 +196,7 @@ export default function ItServicesPage() {
             {[
               { href: '#leistungen', label: 'Leistungen' },
               { href: '#zusammenarbeit', label: 'Zusammenarbeit' },
-              { href: '#referenzen', label: 'Referenzen' }
+              { href: '#referenzen', label: 'Referenzen' },
             ].map((item) => (
               <li key={item.href}>
                 <Link
@@ -208,32 +211,33 @@ export default function ItServicesPage() {
         </nav>
       </section>
 
-      <section className="mt-8 relative overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 to-teal-50/60 p-8 shadow-sm dark:border-zinc-700/50 dark:from-zinc-900 dark:to-zinc-800 sm:p-12">
-        <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/20" />
+      <section className="relative mt-8 overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 to-teal-50/60 p-8 shadow-sm sm:p-12 dark:border-zinc-700/50 dark:from-zinc-900 dark:to-zinc-800">
+        <div className="absolute -right-24 -top-24 h-56 w-56 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/20" />
         <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-500/20" />
 
         <div className="relative max-w-3xl">
           <p className="inline-flex rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700 dark:border-teal-500/40 dark:bg-zinc-900/70 dark:text-teal-300">
             IT-Unterstützung vor Ort
           </p>
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-5xl">
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
             IT-Services in Mannheim und den Stadtteilen Seckenheim, Neckarau,
             Friedrichsfeld und Feudenheim
           </h1>
           <p className="mt-6 text-base leading-7 text-zinc-700 dark:text-zinc-300">
             Ich lebe in Seckenheim und möchte die Menschen und Unternehmen in
-            Mannheim und den umliegenden Stadtteilen digital stärker machen.
-            Sie erhalten pragmatische IT-Lösungen mit Fokus auf Microsoft
-            Azure. Ich unterstütze gern bei Excel-Lösungen, aber das
-            eigentliche Ziel bleibt immer: aus Excel eine skalierbare
-            Anwendung zu machen.
+            Mannheim und den umliegenden Stadtteilen digital stärker machen. Sie
+            erhalten pragmatische IT-Lösungen mit Fokus auf Microsoft Azure. Ich
+            unterstütze gern bei Excel-Lösungen, aber das eigentliche Ziel
+            bleibt immer: aus Excel eine skalierbare Anwendung zu machen.
           </p>
           <p className="mt-4 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
             Regional in Mannheim, Seckenheim, Neckarau, Friedrichsfeld und
             Feudenheim, schnell erreichbar in der gesamten Rhein-Neckar-Region.
           </p>
           <div className="mt-8 flex flex-wrap items-center gap-3">
-            <Button href="mailto:daniel@sirz.de">Jetzt unverbindlich anfragen</Button>
+            <Button href="mailto:daniel@sirz.de">
+              Jetzt unverbindlich anfragen
+            </Button>
             <Button href="/about" variant="secondary">
               Mehr über mich
             </Button>
@@ -243,7 +247,7 @@ export default function ItServicesPage() {
 
       <section id="leistungen" className="mt-16 scroll-mt-24">
         <div className="mb-8 max-w-2xl">
-          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 sm:text-3xl dark:text-zinc-100">
             Leistungen für lokale Unternehmen
           </h2>
           <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
@@ -270,7 +274,7 @@ export default function ItServicesPage() {
 
       <section
         id="zusammenarbeit"
-        className="mt-16 scroll-mt-24 grid grid-cols-1 gap-8 rounded-3xl border border-zinc-200/70 bg-zinc-50/70 p-8 dark:border-zinc-700/50 dark:bg-zinc-900/50 lg:grid-cols-[1.1fr_1.4fr]"
+        className="mt-16 grid scroll-mt-24 grid-cols-1 gap-8 rounded-3xl border border-zinc-200/70 bg-zinc-50/70 p-8 lg:grid-cols-[1.1fr_1.4fr] dark:border-zinc-700/50 dark:bg-zinc-900/50"
       >
         <div>
           <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
@@ -300,14 +304,14 @@ export default function ItServicesPage() {
 
       <section
         id="referenzen"
-        className="mt-16 scroll-mt-24 mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 dark:border-zinc-700/50 dark:bg-zinc-900/60 sm:p-10"
+        className="mb-8 mt-16 scroll-mt-24 rounded-3xl border border-zinc-200/70 bg-white p-8 sm:p-10 dark:border-zinc-700/50 dark:bg-zinc-900/60"
       >
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
           Referenz: Migration der Vereinssoftware für die TSG Seckenheim
         </h2>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
-          Im Mai 2022 habe ich die bestehende Vereinssoftware der TSG
-          Seckenheim auf{' '}
+          Im Mai 2022 habe ich die bestehende Vereinssoftware der TSG Seckenheim
+          auf{' '}
           <Link
             href="https://www.kurabu.com/"
             target="_blank"
@@ -315,10 +319,11 @@ export default function ItServicesPage() {
             className="font-medium text-teal-700 underline decoration-teal-300 underline-offset-4 transition hover:text-teal-900 dark:text-teal-300 dark:decoration-teal-600 dark:hover:text-teal-200"
           >
             KURABU
-          </Link>{' '}migriert. Die Mitgliederdaten wurden aus der alten
-          Datenbank nach KURABU überführt. Bei rund 3000 Datensätzen habe
-          ich den Import vollständig automatisiert, um Fehler zu minimieren und
-          den Umstieg sicher und schnell umzusetzen.
+          </Link>{' '}
+          migriert. Die Mitgliederdaten wurden aus der alten Datenbank nach
+          KURABU überführt. Bei rund 3000 Datensätzen habe ich den Import
+          vollständig automatisiert, um Fehler zu minimieren und den Umstieg
+          sicher und schnell umzusetzen.
         </p>
         <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-600 dark:text-zinc-400">
           Zusätzlich habe ich dem Hersteller KURABU konkrete Hinweise zur
@@ -364,7 +369,7 @@ export default function ItServicesPage() {
         </div>
       </section>
 
-      <section className="mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 dark:border-zinc-700/50 dark:bg-zinc-900/60 sm:p-10">
+      <section className="mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 sm:p-10 dark:border-zinc-700/50 dark:bg-zinc-900/60">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
           <div>
             <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
@@ -380,9 +385,9 @@ export default function ItServicesPage() {
               >
                 zinsmeister-movement.de
               </Link>{' '}
-              erstelle ich die Homepage sowie passende Printmedien, damit
-              Marke, Design und Kommunikation über alle Kanäle hinweg
-              konsistent wirken.
+              erstelle ich die Homepage sowie passende Printmedien, damit Marke,
+              Design und Kommunikation über alle Kanäle hinweg konsistent
+              wirken.
             </p>
             <p className="mt-4 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
               Dabei verbinde ich modernes Webdesign mit klaren Inhalten und
