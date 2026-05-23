@@ -6,8 +6,8 @@ import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { toAbsoluteUrl } from '@/lib/site'
 import businessPhoto from '@/images/photos/Daniel Sirz Business.png'
-import photoOne from '@/images/photos/image-1.jpg'
-import photoTwo from '@/images/photos/image-2.jpg'
+import kurabuLogo from './images/kurabu-logo.svg'
+import juliaZinsmeisterPhoto from './images/Julia Zinsmeister.jpg'
 
 const services = [
   {
@@ -23,7 +23,7 @@ const services = [
   {
     title: 'Excel-Beratung & Excel-Transformation',
     description:
-      'Ich berate rund um Excel, optimiere bestehende Dateien und transformiere komplexe Excel-Lösungen in professionelle Anwendungen mit sauberem Datenmodell.',
+      'Ich unterstütze bei der Entwicklung und Weiterentwicklung Ihrer Excel-Lösungen. Das klare Ziel ist die strukturierte Überführung in eine professionelle Anwendung mit sauberem Datenmodell.',
   },
 ]
 
@@ -38,7 +38,7 @@ const process = [
     step: '02',
     title: 'Klare Umsetzung in Etappen',
     description:
-      'Sie erhalten einen realistischen Plan mit transparenter Priorisierung statt unnötig komplexer Konzepte.',
+      'Sie erhalten einen realistischen Plan mit transparenter Priorisierung. So führen wir Ihre Excel-Lösung Schritt für Schritt in eine stabile Anwendung über.',
   },
   {
     step: '03',
@@ -184,7 +184,31 @@ export default function ItServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
       />
 
-      <section className="relative overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 to-teal-50/60 p-8 shadow-sm dark:border-zinc-700/50 dark:from-zinc-900 dark:to-zinc-800 sm:p-12">
+      <section>
+        <nav
+          aria-label="Sprungnavigation"
+          className="rounded-2xl border border-zinc-200/70 bg-white/80 p-3 backdrop-blur dark:border-zinc-700/60 dark:bg-zinc-900/70"
+        >
+          <ul className="flex flex-wrap items-center gap-2">
+            {[
+              { href: '#leistungen', label: 'Leistungen' },
+              { href: '#zusammenarbeit', label: 'Zusammenarbeit' },
+              { href: '#referenzen', label: 'Referenzen' }
+            ].map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="inline-flex rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-zinc-700 transition hover:border-teal-300 hover:text-teal-700 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-200 dark:hover:border-teal-500 dark:hover:text-teal-300"
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </section>
+
+      <section className="mt-8 relative overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 to-teal-50/60 p-8 shadow-sm dark:border-zinc-700/50 dark:from-zinc-900 dark:to-zinc-800 sm:p-12">
         <div className="absolute -top-24 -right-24 h-56 w-56 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/20" />
         <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-500/20" />
 
@@ -200,9 +224,9 @@ export default function ItServicesPage() {
             Ich lebe in Seckenheim und möchte die Menschen und Unternehmen in
             Mannheim und den umliegenden Stadtteilen digital stärker machen.
             Sie erhalten pragmatische IT-Lösungen mit Fokus auf Microsoft
-            Azure. Ich designe nicht nur Software, sondern mache auch sehr
-            gerne Excel-Beratung und transformiere Excel-Lösungen in
-            skalierbare Applikationen.
+            Azure. Ich unterstütze gern bei Excel-Lösungen, aber das
+            eigentliche Ziel bleibt immer: aus Excel eine skalierbare
+            Anwendung zu machen.
           </p>
           <p className="mt-4 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
             Regional in Mannheim, Seckenheim, Neckarau, Friedrichsfeld und
@@ -217,7 +241,7 @@ export default function ItServicesPage() {
         </div>
       </section>
 
-      <section className="mt-16">
+      <section id="leistungen" className="mt-16 scroll-mt-24">
         <div className="mb-8 max-w-2xl">
           <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100 sm:text-3xl">
             Leistungen für lokale Unternehmen
@@ -244,7 +268,10 @@ export default function ItServicesPage() {
         </div>
       </section>
 
-      <section className="mt-16 grid grid-cols-1 gap-8 rounded-3xl border border-zinc-200/70 bg-zinc-50/70 p-8 dark:border-zinc-700/50 dark:bg-zinc-900/50 lg:grid-cols-[1.1fr_1.4fr]">
+      <section
+        id="zusammenarbeit"
+        className="mt-16 scroll-mt-24 grid grid-cols-1 gap-8 rounded-3xl border border-zinc-200/70 bg-zinc-50/70 p-8 dark:border-zinc-700/50 dark:bg-zinc-900/50 lg:grid-cols-[1.1fr_1.4fr]"
+      >
         <div>
           <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
             So läuft die Zusammenarbeit
@@ -271,30 +298,10 @@ export default function ItServicesPage() {
         </ol>
       </section>
 
-      <section className="mt-16 mb-8 rounded-3xl border border-teal-200/70 bg-teal-50 p-8 dark:border-teal-500/30 dark:bg-teal-900/20 sm:p-10">
-        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
-          Für Mannheim. Für Seckenheim, Neckarau, Friedrichsfeld und Feudenheim.
-        </h2>
-        <p className="mt-4 max-w-3xl text-sm leading-7 text-zinc-700 dark:text-zinc-300">
-          Wenn Sie einen verlässlichen IT-Partner suchen, der Ihre Sprache
-          spricht und die lokalen Herausforderungen versteht, dann lassen Sie
-          uns sprechen. Ich unterstütze Betriebe aus Mannheim, Seckenheim,
-          Neckarau, Friedrichsfeld und Feudenheim dabei, Azure sinnvoll
-          einzusetzen, Software sauber umzusetzen und Excel-Lösungen
-          professionell weiterzuentwickeln.
-        </p>
-        <div className="mt-6 flex flex-wrap items-center gap-4">
-          <Button href="mailto:daniel@sirz.de">Kontakt aufnehmen</Button>
-          <Link
-            href="mailto:daniel@sirz.de"
-            className="text-sm font-medium text-zinc-700 underline decoration-zinc-300 underline-offset-4 transition hover:text-zinc-900 dark:text-zinc-300 dark:decoration-zinc-500 dark:hover:text-zinc-100"
-          >
-            daniel@sirz.de
-          </Link>
-        </div>
-      </section>
-
-      <section className="mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 dark:border-zinc-700/50 dark:bg-zinc-900/60 sm:p-10">
+      <section
+        id="referenzen"
+        className="mt-16 scroll-mt-24 mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 dark:border-zinc-700/50 dark:bg-zinc-900/60 sm:p-10"
+      >
         <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
           Referenz: Migration der Vereinssoftware für die TSG Seckenheim
         </h2>
@@ -320,7 +327,7 @@ export default function ItServicesPage() {
           funktioniert.
         </p>
 
-        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2">
           <figure className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50 dark:border-zinc-700/50 dark:bg-zinc-800/50">
             <Image
               src={businessPhoto}
@@ -331,26 +338,71 @@ export default function ItServicesPage() {
               Projektbegleitung und technische Umsetzung
             </figcaption>
           </figure>
-          <figure className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50 dark:border-zinc-700/50 dark:bg-zinc-800/50">
-            <Image
-              src={photoOne}
-              alt="Automatisierter Datenimport bei der Migration auf KURABU"
-              className="h-56 w-full object-cover"
-            />
+          <figure className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-white dark:border-zinc-700/50 dark:bg-zinc-900/70">
+            <Link
+              href="https://www.kurabu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="KURABU Website öffnen"
+              className="flex h-56 items-center justify-center p-8"
+            >
+              <div className="flex w-full max-w-xs flex-col items-center gap-3">
+                <Image
+                  src={kurabuLogo}
+                  alt="KURABU Logo"
+                  className="h-16 w-auto"
+                />
+                <span className="text-2xl font-bold tracking-[0.16em] text-zinc-800 dark:text-zinc-100">
+                  KURABU
+                </span>
+              </div>
+            </Link>
             <figcaption className="px-4 py-3 text-xs text-zinc-600 dark:text-zinc-400">
-              Automatisierter Import für ca. 3000 Datensätze
+              Partnerplattform für die Vereinsmigration
             </figcaption>
           </figure>
-          <figure className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50 dark:border-zinc-700/50 dark:bg-zinc-800/50">
-            <Image
-              src={photoTwo}
-              alt="Beratung zur Weiterentwicklung der KURABU-Importfunktionen"
-              className="h-56 w-full object-cover"
-            />
-            <figcaption className="px-4 py-3 text-xs text-zinc-600 dark:text-zinc-400">
-              Technisches Feedback direkt an den Hersteller
-            </figcaption>
-          </figure>
+        </div>
+      </section>
+
+      <section className="mb-8 rounded-3xl border border-zinc-200/70 bg-white p-8 dark:border-zinc-700/50 dark:bg-zinc-900/60 sm:p-10">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_1.1fr] lg:items-start">
+          <div>
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+              Referenz: Website und Printmedien für Julia Zinsmeister
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+              Für{' '}
+              <Link
+                href="https://zinsmeister-movement.de"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-teal-700 underline decoration-teal-300 underline-offset-4 transition hover:text-teal-900 dark:text-teal-300 dark:decoration-teal-600 dark:hover:text-teal-200"
+              >
+                zinsmeister-movement.de
+              </Link>{' '}
+              erstelle ich die Homepage sowie passende Printmedien, damit
+              Marke, Design und Kommunikation über alle Kanäle hinweg
+              konsistent wirken.
+            </p>
+            <p className="mt-4 text-sm leading-7 text-zinc-600 dark:text-zinc-400">
+              Dabei verbinde ich modernes Webdesign mit klaren Inhalten und
+              ergänze das digitale Erscheinungsbild durch abgestimmte
+              Materialien für den Einsatz vor Ort.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6">
+            <figure className="overflow-hidden rounded-2xl border border-zinc-200/70 bg-zinc-50 dark:border-zinc-700/50 dark:bg-zinc-800/50">
+              <Image
+                src={juliaZinsmeisterPhoto}
+                alt="Julia Zinsmeister bei einem Outdoor-Workout"
+                className="h-56 w-full object-cover"
+              />
+              <figcaption className="px-4 py-3 text-xs text-zinc-600 dark:text-zinc-400">
+                Umsetzung der Website und Printmedien für Julia Zinsmeister
+              </figcaption>
+            </figure>
+          </div>
         </div>
       </section>
     </Container>
