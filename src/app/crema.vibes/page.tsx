@@ -12,6 +12,7 @@ import rosetta3 from '@/images/crema.vibes/rosetta3.jpeg'
 import tulip from '@/images/crema.vibes/tulip.jpeg'
 import heart from '@/images/crema.vibes/heart.jpeg'
 import cremaVibesLogo from '@/images/crema.vibes/CremaVibes.svg'
+import { Button } from '@/components/Button'
 import { Container } from '@/components/Container'
 import { InstagramIcon } from '@/components/SocialIcons'
 
@@ -40,12 +41,34 @@ function SocialLink({
 export const metadata = {
   title: 'Crema Vibes 🍵',
   description:
-    'Daniel Sirz -Crema Vibes - Hobby Barista & Latte Art Enthusiast since 2025',
+    'Crema Vibes - Latte Art Workshop in Mannheim with hands-on coaching for hearts, tulips, and rosettas.',
 }
 
 export default function Coffee() {
   return (
     <Container className="mt-16 sm:mt-32">
+      <section className="relative mb-16 overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 via-white to-teal-50/70 p-8 shadow-sm sm:mb-20 sm:p-12 dark:border-zinc-700/60 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800">
+        <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/20" />
+        <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-500/20" />
+
+        <div className="relative max-w-3xl">
+          <p className="inline-flex rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700 dark:border-teal-500/40 dark:bg-zinc-900/70 dark:text-teal-300">
+            Learn latte art with structured, hands-on coaching
+          </p>
+          <h1 className="mt-5 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
+            New: Latte Art Workshop
+          </h1>
+          <p className="mt-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+            The workshop is now live. If you want to pour cleaner hearts,
+            tulips, and rosettas, this is the fastest path from guesswork to
+            repeatable results.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button href="/crema.vibes/workshop">View workshop page</Button>
+          </div>
+        </div>
+      </section>
+
       <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
         <div className="lg:pl-20">
           <div className="max-w-xs px-2.5 lg:mt-40 lg:max-w-none">
@@ -228,7 +251,7 @@ export default function Coffee() {
           <div
             className={clsx(
               'relative aspect-[7/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
-              'rotate-',
+              'rotate-2',
             )}
           >
             <Image
