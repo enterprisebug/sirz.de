@@ -22,7 +22,13 @@ export function Providers({ children }: { children: React.ReactNode }) {
 
   return (
     <AppContext.Provider value={{ previousPathname }}>
-      <ThemeProvider attribute="class" disableTransitionOnChange>
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        enableColorScheme
+        disableTransitionOnChange
+      >
         {children}
       </ThemeProvider>
     </AppContext.Provider>
