@@ -263,7 +263,7 @@ export default async function Home() {
 
   return (
     <>
-      <Container className="mt-9">
+      <Container className="sm:px-8 mt-16 sm:mt-32">
         <div className="max-w-3xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
             Daniel Sirz - father, cloud software architect, Barista, Tennis and

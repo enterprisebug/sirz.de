@@ -41,45 +41,137 @@ function SocialLink({
 export const metadata = {
   title: 'Crema Vibes 🍵',
   description:
-    'Crema Vibes - Latte Art Workshop in Mannheim with hands-on coaching for hearts, tulips, and rosettas.',
+    'Crema Vibes Latte Art Workshop in Mannheim: hands-on coaching for hearts, tulips, and rosettas.',
 }
 
 export default function Coffee() {
+  const learnList = [
+    'How to texture milk to a paint-like consistency.',
+    'Cup and pitcher movement that creates clean definition.',
+    'The sequence for heart, tulip, and rosetta pours.',
+    'How to diagnose and correct failed pours quickly.',
+  ]
+
+  const faqs = [
+    {
+      question: 'Do I need prior experience?',
+      answer:
+        'No. The workshop is beginner-friendly and also useful for home baristas with basic espresso experience.',
+    },
+    {
+      question: 'Where does the workshop take place?',
+      answer:
+        'The workshop takes place in my kitchen at Kloppenheimer Strasse 50, 68239 Mannheim.',
+    },
+    {
+      question: 'Can I bring questions about my own setup?',
+      answer:
+        'Absolutely. Bring photos of your machine and grinder, and we can review them together.',
+    },
+    {
+      question: 'Do I need to bring my own equipment?',
+      answer:
+        'Of course not. I provide all the necessary equipment, including a La Marzocco Linea Micra espresso machine and a La Marzocco Pico grinder. Leveler and tamper are also provided. You just need to bring yourself and your enthusiasm for learning!',
+    }
+  ]
+
   return (
     <Container className="mt-16 sm:mt-32">
-      <section className="relative mb-16 overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 via-white to-teal-50/70 p-8 shadow-sm sm:mb-20 sm:p-12 dark:border-zinc-700/60 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800">
+      <section className="relative overflow-hidden rounded-3xl border border-zinc-200/70 bg-gradient-to-br from-zinc-50 via-white to-teal-50/70 p-8 shadow-sm sm:p-12 dark:border-zinc-700/60 dark:from-zinc-900 dark:via-zinc-900 dark:to-zinc-800">
         <div className="absolute -right-20 -top-20 h-56 w-56 rounded-full bg-teal-200/40 blur-3xl dark:bg-teal-500/20" />
         <div className="absolute -bottom-24 -left-20 h-56 w-56 rounded-full bg-cyan-200/40 blur-3xl dark:bg-cyan-500/20" />
 
-        <div className="relative max-w-3xl">
-          <p className="inline-flex rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700 dark:border-teal-500/40 dark:bg-zinc-900/70 dark:text-teal-300">
-            Learn latte art with structured, hands-on coaching
-          </p>
-          <h1 className="mt-5 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
-            New: Latte Art Workshop
-          </h1>
-          <p className="mt-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
-            The workshop is now live. If you want to pour cleaner hearts,
-            tulips, and rosettas, this is the fastest path from guesswork to
-            repeatable results.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/crema.vibes/workshop">View workshop page</Button>
+        <div className="relative grid grid-cols-1 gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div>
+            <p className="inline-flex rounded-full border border-teal-200 bg-white/80 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-teal-700 dark:border-teal-500/40 dark:bg-zinc-900/70 dark:text-teal-300">
+              Latte Art Workshop
+            </p>
+            <h1 className="mt-5 text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl dark:text-zinc-100">
+              Latte Art Workshop in Mannheim
+            </h1>
+            <p className="mt-5 text-base leading-7 text-zinc-700 dark:text-zinc-300">
+              Learn to pour better cups with a practical, guided workshop focused
+              on real progress in one session.
+            </p>
+            <p className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+              This workshop is designed for coffee lovers who want practical
+              results, not theory overload. You will practice every step, get
+              direct feedback, and leave with a clear training routine.
+            </p>
+            <h2 className="mt-6 text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+              What you&apos;ll learn
+            </h2>
+            <ul className="mt-3 space-y-2 text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+              {learnList.map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <span
+                    className="mt-2 h-2 w-2 rounded-full bg-teal-500"
+                    aria-hidden="true"
+                  />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="mt-8 flex flex-wrap gap-3">
+              <Button href="#book" variant="primary">
+                Book workshop
+              </Button>
+              <Button href="#pricing" variant="secondary">
+                Pricing options
+              </Button>
+            </div>
+          </div>
+          <div className="mx-auto max-w-xs lg:mx-0 lg:max-w-none">
+            <Image
+              src={rosetta}
+              alt="Rosetta latte art"
+              sizes="(min-width: 1024px) 30rem, 20rem"
+              className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              priority
+            />
           </div>
         </div>
       </section>
 
-      <div className="grid grid-cols-1 gap-y-16 lg:grid-cols-2 lg:grid-rows-[auto_1fr] lg:gap-y-12">
-        <div className="lg:pl-20">
-          <div className="max-w-xs px-2.5 lg:mt-40 lg:max-w-none">
-            <Image
-              src={portraitImage}
-              alt="Daniel Sirz Barista Profile Picture"
-              sizes="(min-width: 1024px) 32rem, 20rem"
-              className="aspect-square rotate-2 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-            />
-          </div>
-          <ul role="list" className="mt-10">
+      <section className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2" id="audience">
+        <article className="rounded-2xl border border-zinc-200/70 bg-zinc-50 p-6 dark:border-zinc-700/60 dark:bg-zinc-900">
+          <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+            Who it&apos;s for
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            Home baristas and coffee enthusiasts who want structured guidance and
+            repeatable technique.
+          </p>
+        </article>
+        <article className="rounded-2xl border border-zinc-200/70 bg-zinc-50 p-6 dark:border-zinc-700/60 dark:bg-zinc-900">
+          <h2 className="text-xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+            Who it&apos;s not for
+          </h2>
+          <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            Anyone expecting a lecture-only format without active practice.
+          </p>
+        </article>
+      </section>
+
+      <section className="mt-12 grid grid-cols-1 gap-8 rounded-3xl border border-zinc-200/70 bg-white/80 p-8 backdrop-blur dark:border-zinc-700/60 dark:bg-zinc-900/70 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+        <div className="max-w-xs">
+          <Image
+            src={portraitImage}
+            alt="Daniel Sirz - Crema Vibes"
+            sizes="20rem"
+            className="aspect-square rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+          />
+        </div>
+        <div>
+          <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+            Instructor
+          </h2>
+          <p className="mt-4 text-base leading-7 text-zinc-600 dark:text-zinc-400">
+            I&apos;m Daniel, a dedicated home barista and latte art enthusiast.
+            I train daily with a high-end home espresso setup and focus on a
+            coaching style that is practical, calm, and repeatable.
+          </p>
+          <ul role="list" className="mt-6">
             <SocialLink
               href="https://www.instagram.com/crema.vibes/"
               icon={InstagramIcon}
@@ -88,41 +180,123 @@ export default function Coffee() {
             </SocialLink>
           </ul>
         </div>
-        <div className="lg:order-first lg:row-span-2">
-          <header className="max-w-3xl">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-              My Journey into Cappuccino Excellence
-            </h1>
-            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              Welcome to Crema Vibes, where every cup tells a story of passion,
-              precision, and the pursuit of the perfect brew. My name is Daniel,
-              and I&apos;m a dedicated home barista with a profound love for all
-              things coffee.
-            </p>
-            <p className="m-10 text-base text-zinc-600 dark:text-zinc-400">
-              <a
-                href="https://www.instagram.com/crema.vibes/"
-                target="_blank"
-                title="crema.vibes on Instagram"
-              >
-                <Image
-                  src={cremaVibesLogo}
-                  alt="Crema Vibes on instagram"
-                  sizes="(min-width: 1024px) 32rem, 20rem"
-                  className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
-                />
-              </a>
-            </p>
-            <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-              My journey into the world of high-end espresso began in early May
-              2025, a date etched in my memory. That&apos;s when I finally
-              welcomed two magnificent pieces of machinery into my home: the
-              legendary La Marzocco Linea Micra espresso machine and its perfect
-              companion, the La Marzocco Pico grinder.
-            </p>
-          </header>
+      </section>
+
+      <section className="mt-12" id="pricing">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+          Pricing and booking options
+        </h2>
+        <div className="mt-6 grid grid-cols-1 gap-5 md:grid-cols-3">
+          {[
+            {
+              title: '1:1 Intensive',
+              price: '149 EUR',
+              detail: 'Two hours, fully focused on your level and goals.',
+            },
+            {
+              title: 'Duo Workshop',
+              price: '279 EUR',
+              detail: 'Bring one person and train together.',
+            },
+            {
+              title: 'I visit your location',
+              price: 'Price on request',
+              detail:
+                'I come to your place and prepare a custom offer based on location and setup.',
+            },
+          ].map((item) => (
+            <article
+              key={item.title}
+              className="rounded-2xl border border-zinc-200/70 bg-zinc-50 p-6 dark:border-zinc-700/60 dark:bg-zinc-900"
+            >
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-zinc-100">
+                {item.title}
+              </h3>
+              <p className="mt-2 text-2xl font-bold text-teal-700 dark:text-teal-300">
+                {item.price}
+              </p>
+              <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                {item.detail}
+              </p>
+            </article>
+          ))}
         </div>
-      </div>
+        <div className="mt-6">
+          <Button href="#book" variant="primary">
+            Request booking
+          </Button>
+        </div>
+      </section>
+
+      <section className="mt-12 max-w-4xl" id="faq">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+          FAQ
+        </h2>
+        <div className="mt-6 space-y-4">
+          {faqs.map((item) => (
+            <article
+              key={item.question}
+              className="rounded-2xl border border-zinc-200/70 bg-white/80 p-5 backdrop-blur dark:border-zinc-700/60 dark:bg-zinc-900/70"
+            >
+              <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100">
+                {item.question}
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+                {item.answer}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12 rounded-3xl border border-teal-200 bg-teal-50/70 p-8 dark:border-teal-500/40 dark:bg-teal-950/20" id="book">
+        <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+          How to book?
+        </h2>
+        <p className="mt-3 max-w-2xl text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+          Send an email to <a href="mailto:daniel@sirz.de?subject=Book%20Latte%20Art%20Workshop" className="text-teal-600 dark:text-teal-400">daniel@sirz.de</a> with your preferred date, number of participants, and any questions you may have. I will respond promptly to confirm availability and provide further details. 
+        </p>
+      </section>
+
+      <section className="mt-16 sm:mt-20" id="story">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-[2fr_1fr] lg:items-start">
+          <div className="max-w-3xl">
+            <h2 className="text-2xl font-semibold tracking-tight text-zinc-900 dark:text-zinc-100">
+              About crema vibes
+            </h2>
+            <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+              I started this espresso journey in May 2025 with a Linea Micra
+              and Pico grinder. Since then, I practice latte art almost daily
+              and keep refining a workflow that makes better cups more
+              repeatable.
+            </p>
+            <p className="mt-4 text-base text-zinc-600 dark:text-zinc-400">
+              I also built my own coffee table for ergonomic prep and source
+              beans locally whenever possible. Crema Vibes is where I share
+              that craft and bring it into practical workshops.
+            </p><p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+              Of course, the heart of any great coffee lies in its beans. I&apos;m a
+              strong advocate for supporting local businesses, which is why I
+              exclusively source my beans from a fantastic local roastery. This not
+              only ensures freshness and quality but also allows me to explore a
+              diverse range of exquisite flavors and profiles.
+            </p>
+          </div>
+          <a
+            href="https://www.instagram.com/crema.vibes/"
+            target="_blank"
+            title="crema.vibes on Instagram"
+            className="block max-w-xs lg:justify-self-end"
+          >
+            <Image
+              src={cremaVibesLogo}
+              alt="Crema Vibes logo"
+              sizes="(min-width: 1024px) 20rem, 16rem"
+              className="rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+            />
+          </a>
+        </div>
+      </section>
 
       <div className="mt-16 sm:mt-20">
         <div className="-my-4 flex justify-center gap-5 overflow-visible py-4 sm:gap-8">
@@ -182,29 +356,7 @@ export default function Coffee() {
       </div>
       <div className="mt-16 max-w-3xl sm:mt-20">
         <p className="text-base text-zinc-600 dark:text-zinc-400">
-          Since then, my kitchen has transformed into a vibrant training ground,
-          primarily for mastering the intricate dance of latte art. There&apos;s
-          something incredibly satisfying about transforming milk into delicate
-          hearts, rosettas, and tulips, and I&apos;m constantly pushing myself
-          to refine my technique.
-        </p>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          My dedication extends beyond just the brewing process. To truly create
-          my ideal coffee sanctuary, I even designed and built the custom coffee
-          bar that perfectly houses my beloved La Marzocco setup. At 196cm tall,
-          standard counter heights often lead to uncomfortable bending. So, I
-          meticulously crafted the table to my exact specifications, ensuring an
-          ergonomic height that allows me to prepare every shot in comfort and
-          style. It&apos;s truly a labor of love, designed to optimize my
-          workflow and enhance the entire brewing experience.
-        </p>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Beyond my personal enjoyment, I love sharing the magic of freshly
-          brewed, expertly crafted coffee with others. For private small events
-          and gatherings, I&apos;m thrilled to bring my machine and offer a
-          unique coffee experience to your guests. Imagine the aroma of freshly
-          ground beans and the sight of perfectly poured latte art elevating
-          your celebration!
+          A few impressions from my current setup and daily practice.
         </p>
       </div>
       <div className="mt-16 sm:mt-20">
@@ -262,21 +414,6 @@ export default function Coffee() {
             />
           </div>
         </div>
-      </div>
-      <div className="mt-16 max-w-3xl sm:mt-20">
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Of course, the heart of any great coffee lies in its beans. I&apos;m a
-          strong advocate for supporting local businesses, which is why I
-          exclusively source my beans from a fantastic local roastery. This not
-          only ensures freshness and quality but also allows me to explore a
-          diverse range of exquisite flavors and profiles.
-        </p>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          My ultimate goal is to cultivate this passion into a small, sideline
-          business, sharing the joy and artistry of specialty coffee with an
-          even wider audience. Crema Vibes is more than just a hobby; it&apos;s
-          a testament to the pursuit of perfection, one delicious cup at a time.
-        </p>
       </div>
     </Container>
   )
